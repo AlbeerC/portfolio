@@ -1,0 +1,122 @@
+#aboutMe {
+    margin: 8rem auto 4rem auto;
+    max-width: 80rem;
+    color: $white;
+    text-align: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(54,53,53,1) 61%, rgba(103,101,101,1) 100%);
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.39); 
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.53);
+    padding: 4rem;
+    border-radius: 4rem;
+
+    @include responsive(tablet) {
+        padding: 0 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .aboutMe-top {
+        h2 {
+            font-size: 4rem;
+            background: #34dfcb;
+            background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
+            background: linear-gradient(to right, #34dfcb, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            @include responsive(tablet) {
+                padding-top: 2rem;
+                font-size: 3rem;
+            }
+        }
+    
+        p {
+            font-size: 2.2rem;
+            margin: 3rem 0;
+            line-height: 3.5rem;
+            font-weight: 600;
+            text-align: justify;
+
+            @include responsive(tablet) {
+                font-size: 1.7rem;
+            }
+        }
+    }
+    
+    .aboutMe-bottom {
+        h3 {
+            font-size: 3.5rem;
+            font-weight: 500;
+
+            @include responsive(tablet) {
+                font-size: 2.5rem;
+            }
+        }
+
+        img {
+            margin-top: 2rem;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* SLIDER */
+        .slider {
+            width: 50vw;
+            height: auto;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 3rem;
+            padding-bottom: 1rem;
+            border-radius: 2rem;
+
+            @include responsive(tablet) {
+                width: 90vw;
+                padding: 1rem;
+            }
+
+            .slide-track {
+                display: flex;
+                align-items: center;
+                gap: 5rem;
+                animation: scroll 15s linear infinite;
+                -webkit-animation: scroll 15s linear infinite;
+                width: calc(150px * 18);
+
+                @keyframes scroll {
+                    0% {
+                        -webkit-transform: translateX(0);
+                        transform: translateX(0);
+                    }
+                    100% {
+                        -webkit-transform: translateX(calc(-150px * 9));
+                        transform: translateX(calc(-150px * 9));
+                    }
+                }
+
+                .slide {
+                    width: 15rem;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: .5rem;
+
+                    p {
+                        text-align: center;
+                        font-size: 1.7rem;
+                        color: #ffffff;
+                        margin: 0;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                    img {
+                        width: 7rem;
+                        height: 7rem;
+                    }
+                }
+            }
+        }
+    }
+}

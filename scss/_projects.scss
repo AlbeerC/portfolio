@@ -1,0 +1,73 @@
+#projects {
+    margin-top: 10rem;
+
+    h2 {
+        font-size: 4rem;
+        color: $white;
+        text-align: center;
+    }
+
+    .projects-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10rem;
+        margin: 4rem 5rem 0 5rem;
+
+        .project-card {
+            background: rgb(12,11,78);
+            background: linear-gradient(0deg, rgba(12,11,78,1) 0%, rgba(201,201,201,1) 80%); 
+            border-radius: 2rem;
+            color: #ffffff;
+            max-width: 40rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            padding: 3rem;
+            text-align: center;
+            -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+            box-shadow: 5px 5px 15px 5px #000000;
+
+            .project-card-title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 6rem;
+
+                h3 {
+                    font-size: 2.2rem;
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    letter-spacing: normal;
+                }
+
+                a {
+                    background-color: transparent;
+                    border: 2px solid $lightBlue;
+                    padding: 5px 30px;
+                    border-radius: 20px;
+                    color: #ffffff;
+                    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $lightBlue;
+                        border: 2px solid $black;
+                    }
+                }
+            }
+
+            p {
+                font-size: 1.8rem;
+                text-align: justify;
+                line-height: 23px;
+            }
+
+            .tecnologies {
+                font-weight: bold;
+            }
+        }
+    }
+}

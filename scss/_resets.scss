@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+    @include bgBody;
+}
+h1,h2,h3 {
+    font-weight: bold;
+    font-family: $titleFont;
+    letter-spacing: 5px;
+}
+p {
+    font-family: $textFont;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: $linkFont;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}

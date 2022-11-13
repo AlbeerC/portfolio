@@ -1,0 +1,113 @@
+#hero {
+    color: $white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15rem 0 4rem 0;
+    letter-spacing: 4px;
+
+    @include responsive(pc) {
+        margin-bottom: 0;
+        justify-content: center;
+    }
+
+    .heroLeft {
+        .heroLeft-top {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+
+            img {
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-top: 2rem;
+            }
+
+            .heroLeft-top-titles{
+                h2 {
+                    max-width: 20rem;
+                    padding: 1.5rem 0;
+                    color: $lightBlue;
+                    font-size: 4.5rem;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+
+                h3 {
+                    font-size: 3rem;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-align: center;
+                }
+            }
+        }
+
+        .heroLeft-bottom {
+            h4 {
+                padding-top: 2rem;
+                font-weight: normal;
+                font-size: 3rem;
+            }
+
+            button {
+                margin-top: 3rem;
+                background-color: $pink;
+                padding: 1rem 2rem;
+                border-radius: 2rem;
+                color: $white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 2rem;
+                border: 2px solid $white;
+                cursor: pointer;
+                animation: parpadeo 2s linear infinite;
+                transition: 1s ease;
+
+                &:hover {
+                    animation: none;
+                }
+
+                @keyframes parpadeo  {
+                    0%, 41%, 45%, 47%, 49.5%, 100%  { 
+                        opacity: 1;
+                    }
+                
+                    42%, 44%, 46%,48%,  50%  { 
+                        opacity: 0; 
+                    }
+                }
+            }
+        }
+    }
+
+    .heroRight {
+        img {
+            width: 50rem;
+            height: auto;
+            padding-top: 6rem;
+            transition: all ease 1s;
+            animation: float 5s ease-in-out infinite;
+
+            &:hover {
+                filter: grayscale(70%);
+            }
+
+            @include responsive(pc) {
+                display: none;
+            }
+
+            @keyframes float {
+                0% {
+                  transform: translatey(0px);
+                }
+                50% {
+                  transform: translatey(-20px);
+                }
+                100% {
+                  transform: translatey(0px);
+                }
+            }
+        }
+    }
+}
+
