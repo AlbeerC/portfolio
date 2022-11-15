@@ -8,12 +8,14 @@
     -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.39); 
     box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.53);
     padding: 4rem;
-    border-radius: 4rem;
+    border-radius: 3rem;
 
     @include responsive(tablet) {
         padding: 0 2rem;
         margin-left: 1rem;
         margin-right: 1rem;
+        background: transparent;
+        box-shadow: none;
     }
 
     .aboutMe-top {

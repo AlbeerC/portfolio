@@ -1,72 +1,156 @@
 #projects {
-    margin-top: 10rem;
+    margin-top: 15rem;
 
     h2 {
         font-size: 4rem;
         color: $white;
         text-align: center;
+        background: #34dfcb;
+        background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
+        background: linear-gradient(to right, #34dfcb, #ffffff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
     }
 
     .projects-container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        flex-wrap: wrap;
+        align-items: center;
         gap: 10rem;
         margin: 4rem 5rem 0 5rem;
 
-        .project-card {
-            background: rgb(12,11,78);
-            background: linear-gradient(0deg, rgba(12,11,78,1) 0%, rgba(201,201,201,1) 80%); 
-            border-radius: 2rem;
-            color: #ffffff;
-            max-width: 40rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            align-items: center;
-            padding: 3rem;
-            text-align: center;
-            -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-            box-shadow: 5px 5px 15px 5px #000000;
+        @include responsive(pc) {
+            margin: 4rem 1rem 1rem 1rem;
+        }
 
-            .project-card-title {
+        .card {
+            padding: 1rem 5rem 3rem 5rem;
+            max-width: 80%;
+            margin: 0 auto;
+            color: $white;
+            background: rgb(0,0,0);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(54,53,53,1) 61%, rgba(103,101,101,1) 100%);
+            -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.39); 
+            box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.53);
+
+            @include responsive(pc) {
+                min-width: 90vw;
+                padding: 1rem;
+            }
+
+            .card-imgs {
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                gap: 6rem;
+                justify-content: center;
+                gap: 1rem;
 
-                h3 {
-                    font-size: 2.2rem;
-                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                    letter-spacing: normal;
+                .img-web {
+                    display: block;
+                    width: 60rem;
+                    height: 25rem;
+                    border-radius: 1rem;
+                    animation: 4s ease-in-out 0s infinite normal none running zoom;
+
+                    @include responsive(pc) {
+                        width: 60vw;
+                        height: auto;
+                    }
+                }
+                .img-mobile {
+                    height: 30rem;
+                    width: auto;
+                    animation: 4s ease-in-out 0s infinite normal none running zoom;
+
+                    @include responsive(pc) {
+                        display: none;
+                    }
                 }
 
-                a {
-                    background-color: transparent;
-                    border: 2px solid $lightBlue;
-                    padding: 5px 30px;
-                    border-radius: 20px;
-                    color: #ffffff;
-                    font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    cursor: pointer;
-
-                    &:hover {
-                        background-color: $lightBlue;
-                        border: 2px solid $black;
+                @keyframes zoom {
+                    0% {
+                        transform: scale(0.95);
+                    }
+                    50% {
+                        transform: scale(1);
+                    }
+                    100% {
+                        transform: scale(0.95);
                     }
                 }
             }
 
-            p {
-                font-size: 1.8rem;
-                text-align: justify;
-                line-height: 23px;
-            }
+            .card-flex {
+                display: flex;
+                justify-content: space-around;
 
-            .tecnologies {
-                font-weight: bold;
+                @include responsive(pc) {
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 3rem;
+                    align-items: center;
+                }
+
+                .card-flex-left {
+                    max-width: 50%;
+
+                    @include responsive(pc) {
+                        max-width: 80%;
+                    }
+
+                    h3 {
+                        letter-spacing: normal;
+                        font-size: 2.5rem;
+
+                        @include responsive(pc) {
+                            margin-top: 2rem;
+                        }
+                    }
+        
+                    p {
+                        padding-top: 2rem;
+                        text-align: justify;
+                        font-weight: 700;
+                        line-height: 25px;
+                        font-size: 1.7rem;
+                    }
+                }
+
+                .card-flex-right {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+
+                    a {
+                        margin-top: 2rem;
+                        border: 3px solid $lightBlue;
+                        border-radius: 3rem;
+                        font-size: 1.8rem;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        background-color: transparent;
+                        padding: .5rem;
+                        max-width: 15rem;
+                        text-align: center;
+                        color: $white;
+
+                        &:hover {
+                            color: $pink;
+                            border: 3px solid $pink;
+                        }
+                    }
+        
+                    p {
+                        font-weight: bold;
+                        font-size: 2rem;
+
+                        @include responsive(pc) {
+                            margin-top: 2rem;
+                        }
+                    }
+                }
             }
         }
     }

@@ -3,10 +3,6 @@
     max-width: 80rem;
     color: $white;
     text-align: center;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(54,53,53,1) 61%, rgba(103,101,101,1) 100%);
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.39); 
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.53);
     padding: 4rem;
     border-radius: 4rem;
 
@@ -53,6 +49,13 @@
                     svg {
                         width: 4rem;
                         height: 4rem;
+                        padding: 1rem;
+                        background-color: $pink;
+                        border-radius: 1rem;
+
+                        &:hover {
+                            color: $black;
+                        }
                     }
                 }
             }
