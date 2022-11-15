@@ -13,13 +13,7 @@
 
 
     h2 {
-        font-size: 4rem;
-        background: #34dfcb;
-        background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
-        background: linear-gradient(to right, #34dfcb, #ffffff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        @include sectionTitle;
     }
 
     .contact-flex {

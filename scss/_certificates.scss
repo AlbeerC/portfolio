@@ -1,0 +1,35 @@
+#certificates {
+    h3 {
+        @include sectionTitle;
+        text-align: center;
+        margin: 6rem 0 1rem 0;
+    }
+
+    img {
+        width: 60%;
+        max-height: 40rem;
+        display: block;
+        margin: 0 auto;
+
+        @include responsive(pc) {
+            width: 80%;
+        }
+    }
+
+    .certificates-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+        gap: 10rem;
+
+        button {
+            background-color: $black;
+            padding: .5rem 1rem;
+            border-radius: 50%;
+            border: none;
+            font-size: 5rem;
+            color: $lightBlue;
+            cursor: pointer;
+        }
+    }
+}

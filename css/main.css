@@ -5,6 +5,7 @@
 /* COLORES */
 /* MIXINS */
 /* Background body */
+/* Section title */
 /* Bottom shadow */
 /* Responsive */
 * {
@@ -49,6 +50,7 @@ header {
   justify-content: space-between;
   padding: 2rem 7rem;
   width: 100vw;
+  height: auto;
   position: fixed;
   top: 0;
   z-index: 1; }
@@ -87,8 +89,8 @@ header {
     header .nav-toggle:hover {
       transform: rotate(180deg); }
     header .nav-toggle svg {
-      width: 5rem;
-      height: 5rem;
+      width: 4rem;
+      height: 4rem;
       color: #000000; }
   header .nav-list li a {
     font-size: 2rem;
@@ -150,7 +152,7 @@ header {
   letter-spacing: 4px; }
   @media (max-width: 992px) {
     #hero {
-      margin-bottom: 0;
+      margin: 15rem 2rem 0 2rem;
       justify-content: center; } }
   #hero .heroLeft .heroLeft-top {
     display: flex;
@@ -168,14 +170,25 @@ header {
       color: #4de5c1;
       font-size: 4.5rem;
       font-family: 'Times New Roman', Times, serif; }
+      @media (max-width: 768px) {
+        #hero .heroLeft .heroLeft-top .heroLeft-top-titles h2 {
+          font-size: 3rem; } }
     #hero .heroLeft .heroLeft-top .heroLeft-top-titles h3 {
       font-size: 3rem;
       font-family: 'Times New Roman', Times, serif;
       text-align: center; }
+      @media (max-width: 768px) {
+        #hero .heroLeft .heroLeft-top .heroLeft-top-titles h3 {
+          font-size: 2rem;
+          text-align: left;
+          margin-left: 1rem; } }
   #hero .heroLeft .heroLeft-bottom h4 {
     padding-top: 2rem;
     font-weight: normal;
     font-size: 3rem; }
+    @media (max-width: 768px) {
+      #hero .heroLeft .heroLeft-bottom h4 {
+        font-size: 2rem; } }
   #hero .heroLeft .heroLeft-bottom button {
     margin-top: 3rem;
     background-color: #ce12ce;
@@ -224,8 +237,8 @@ header {
   text-align: center;
   background: black;
   background: linear-gradient(90deg, black 0%, #363535 61%, #676565 100%);
-  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0, 0, 0, 0.39);
-  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 0px 9px 11px 0px rgba(0, 0, 0, 0.72);
+  box-shadow: 0px 9px 11px 0px rgba(0, 0, 0, 0.72);
   padding: 4rem;
   border-radius: 3rem; }
   @media (max-width: 768px) {
@@ -242,7 +255,11 @@ header {
     background: linear-gradient(to right, #34dfcb, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; }
+    color: transparent;
+    text-align: center; }
+    @media (max-width: 768px) {
+      #aboutMe .aboutMe-top h2 {
+        font-size: 3.5rem; } }
     @media (max-width: 768px) {
       #aboutMe .aboutMe-top h2 {
         padding-top: 2rem;
@@ -313,17 +330,19 @@ header {
             height: 7rem; }
 
 #projects {
-  margin-top: 15rem; }
+  margin-top: 10rem; }
   #projects h2 {
     font-size: 4rem;
-    color: #ffffff;
-    text-align: center;
     background: #34dfcb;
     background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
     background: linear-gradient(to right, #34dfcb, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; }
+    color: transparent;
+    text-align: center; }
+    @media (max-width: 768px) {
+      #projects h2 {
+        font-size: 3.5rem; } }
   #projects .projects-container {
     display: flex;
     flex-direction: column;
@@ -341,8 +360,8 @@ header {
       color: #ffffff;
       background: black;
       background: linear-gradient(90deg, black 0%, #363535 61%, #676565 100%);
-      -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0, 0, 0, 0.39);
-      box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0, 0, 0, 0.53); }
+      -webkit-box-shadow: 0px 9px 11px 0px rgba(0, 0, 0, 0.72);
+      box-shadow: 0px 9px 11px 0px rgba(0, 0, 0, 0.72); }
       @media (max-width: 992px) {
         #projects .projects-container .card {
           min-width: 90vw;
@@ -447,7 +466,11 @@ header {
     background: linear-gradient(to right, #34dfcb, #ffffff);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; }
+    color: transparent;
+    text-align: center; }
+    @media (max-width: 768px) {
+      #contact h2 {
+        font-size: 3.5rem; } }
   #contact .contact-flex {
     display: flex;
     justify-content: space-between;
@@ -500,3 +523,41 @@ footer {
       text-decoration: underline; }
       footer p a:hover {
         color: #ce12ce; }
+
+#certificates h3 {
+  font-size: 4rem;
+  background: #34dfcb;
+  background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
+  background: linear-gradient(to right, #34dfcb, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  text-align: center;
+  margin: 6rem 0 1rem 0; }
+  @media (max-width: 768px) {
+    #certificates h3 {
+      font-size: 3.5rem; } }
+
+#certificates img {
+  width: 60%;
+  max-height: 40rem;
+  display: block;
+  margin: 0 auto; }
+  @media (max-width: 992px) {
+    #certificates img {
+      width: 80%; } }
+
+#certificates .certificates-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 10rem; }
+  #certificates .certificates-buttons button {
+    background-color: #000000;
+    padding: .5rem 1rem;
+    border-radius: 50%;
+    border: none;
+    font-size: 5rem;
+    color: #4de5c1;
+    cursor: pointer; }

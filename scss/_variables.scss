@@ -23,6 +23,23 @@ $black: #000000;
     background-attachment: fixed;
 }
 
+/* Section title */
+
+@mixin sectionTitle {
+    font-size: 4rem;
+    background: #34dfcb;
+    background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
+    background: linear-gradient(to right, #34dfcb, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 3.5rem;
+    }
+}
+
 /* Bottom shadow */
 @mixin bottomShadow {
     -webkit-box-shadow: 0px 9px 11px 0px rgba(0,0,0,0.72); 

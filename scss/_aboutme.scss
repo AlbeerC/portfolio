@@ -5,8 +5,7 @@
     text-align: center;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(54,53,53,1) 61%, rgba(103,101,101,1) 100%);
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.39); 
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 3px 22px 15px rgba(0,0,0,0.53);
+    @include bottomShadow;
     padding: 4rem;
     border-radius: 3rem;
 
@@ -20,13 +19,7 @@
 
     .aboutMe-top {
         h2 {
-            font-size: 4rem;
-            background: #34dfcb;
-            background: -webkit-linear-gradient(to right, #34dfcb, #ffffff);
-            background: linear-gradient(to right, #34dfcb, #ffffff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            @include sectionTitle;
 
             @include responsive(tablet) {
                 padding-top: 2rem;
