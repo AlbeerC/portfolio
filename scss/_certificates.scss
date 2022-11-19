@@ -1,35 +1,48 @@
 #certificates {
     h3 {
-        @include sectionTitle;
+        font-size: 3.5rem;
+        font-weight: 500;
         text-align: center;
+        color: $white;
         margin: 6rem 0 1rem 0;
-    }
 
-    img {
-        width: 60%;
-        max-height: 40rem;
-        display: block;
-        margin: 0 auto;
-
-        @include responsive(pc) {
-            width: 80%;
+        @include responsive(tablet) {
+            font-size: 2.5rem;
         }
     }
 
-    .certificates-buttons {
+    .certificates-flex {
         display: flex;
+        align-items: center;
         justify-content: center;
-        margin-top: 3rem;
-        gap: 10rem;
+        gap: 5rem;
+
+        @include responsive(pc) {
+            gap: 0;
+        }
+
+        img {
+            width: 60%;
+            max-height: 45rem;
+    
+            @include responsive(pc) {
+                width: 80%;
+            }
+        }
 
         button {
-            background-color: $black;
+            background-color: transparent;
             padding: .5rem 1rem;
             border-radius: 50%;
             border: none;
             font-size: 5rem;
             color: $lightBlue;
             cursor: pointer;
+
+            @include responsive(pc) {
+                font-size: 2rem;
+
+            }
         }
     }
 }

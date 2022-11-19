@@ -5,7 +5,7 @@ const projects = [
         img2: "../img/project2.2.png",
         name: "Gamer Shop",
         link: "https://gamershop.vercel.app/",
-        text: "Página realizada para el proyecto final del curso de React de CoderHouse. Es un e-commerce de juegos de playstation 5.",
+        text: "Página realizada para el proyecto final del curso de React de CoderHouse. Es un e-commerce de juegos de playstation 5. Está conectada a firebase para controlar el stock de los productos y para guardar las ordenes generadas por clientes",
         tecnologies: "REACT - SASS - FIREBASE"
     },
     {
@@ -14,7 +14,7 @@ const projects = [
         img2: "../img/project1.2.png",
         name: "Sneakers ARG",
         link: "https://albeerc.github.io/Proyecto-Final-JS/",
-        text: "Página realizada para el proyecto final del curso de JavaScript de CoderHouse. Es un simulador de un e-commerce de zapatillas",
+        text: "Página realizada para el proyecto final del curso de JavaScript de CoderHouse. Es un simulador de un e-commerce de zapatillas. Cuenta con un carrito de compras donde sus productos se almacenan en el LocalStorage",
         tecnologies: "HTML - SASS - JAVASCRIPT"
     },
 
@@ -24,7 +24,7 @@ const projects = [
         img2: "../img/project3.2.png",
         name: "Tiago PZK",
         link: "https://tiago-pzk.vercel.app/",
-        text: "Replica de la página oficial del cantante Tiago PZK, con algunas funcionalidades extras",
+        text: "Replica de la página oficial del cantante Tiago PZK. Cuenta con JS para mayor dinamismo. Las fechas de los shows son llamadas a un JSON simulando una API",
         tecnologies: "HTML - SASS - JAVASCRIPT"
     }
 ]

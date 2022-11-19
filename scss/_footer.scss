@@ -1,5 +1,5 @@
 footer {
-    border-top: 1px solid $pink;
+    border-top: 1px solid $lightBlue;
     padding: 2rem 7rem;
     margin-top: 8rem;
     display: flex;
@@ -23,7 +23,7 @@ footer {
             text-decoration: underline;
 
             &:hover {
-                color: $pink;
+                color: $lightBlue;
             }
         }
     }

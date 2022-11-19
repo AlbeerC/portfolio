@@ -17,13 +17,17 @@ window.addEventListener("scroll", function(){
 // Slider de certificados
 const certificates = [
     {
-        img: "../img/react.png"
+        img: "../img/frontend.png"
+    },
+    {
+        img: "../img/dw.png"
+
     },
     {
         img: "../img/js.png"
     },
     {
-        img: "../img/dw.png"
+        img: "../img/react.png"
     }
 ]
 

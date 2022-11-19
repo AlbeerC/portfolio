@@ -33,6 +33,7 @@
             line-height: 3.5rem;
             font-weight: 600;
             text-align: justify;
+            letter-spacing: 1px;
 
             @include responsive(tablet) {
                 font-size: 1.7rem;
@@ -42,11 +43,11 @@
     
     .aboutMe-bottom {
         h3 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 500;
 
             @include responsive(tablet) {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
         }
 

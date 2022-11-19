@@ -8,12 +8,6 @@ header {
     top: 0;
     z-index: 1;
 
-    @include responsive(pc) {
-        background: rgb(184,180,180);
-        background: linear-gradient(0deg, rgba(184,180,180,1) 0%, #4de5c1 65%);
-        @include bottomShadow;
-    }
-
     h1 {
         background-image: linear-gradient(-225deg, #850e85 0%, #306fb8 29%, #6f38a3 67%, #ce12ce 100%);
         background-size: auto auto;
