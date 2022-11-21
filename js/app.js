@@ -15,50 +15,33 @@ window.addEventListener("scroll", function(){
 
 
 // Slider de certificados
-const certificates = [
-    {
-        img: "../img/frontend.png"
-    },
-    {
-        img: "../img/dw.png"
-
-    },
-    {
-        img: "../img/js.png"
-    },
-    {
-        img: "../img/react.png"
-    }
-]
-
-const certImg = document.getElementById("certificates-img");
-
-const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".cert-slide");
 const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
 
-let currentItem = 0;
+slides.forEach((slide, index) => {
+  slide.style.left = `${index * 100}%`;
+});
 
-function showItem() {
-    const item = certificates[currentItem];
-    certImg.src = item.img;
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    showItem(currentItem)
-})
+let counter = 0;
 
 nextBtn.addEventListener("click", () => {
-    currentItem++
-    if (currentItem > certificates.length - 1) {
-        currentItem = 0;
-    }
-    showItem()
-})
-
+  counter++;
+  carousel();
+});
 prevBtn.addEventListener("click", () => {
-    currentItem--
-        if (currentItem < 0) {
-        currentItem = certificates.length - 1;
-    }
-    showItem()
-})
+  counter--;
+  carousel();
+});
+
+function carousel() {
+  if (counter === slides.length) {
+    counter = 0;
+  } else if (counter < 0) {
+    counter = slides.length -1;
+  }
+
+  slides.forEach((slide) => {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+}
